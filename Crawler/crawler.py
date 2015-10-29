@@ -7,12 +7,14 @@ class Crawl(object):
     import queue
     __crawler_queue = queue.Queue()
 
-    def __init__(self, url=None):
+    def __init__(self, url=None, ip=None, range=None):
         """
         Cralwer Constructor
         """
         self.name = "Crawler Object"
         self.url = url
+        self.ip = ip
+        self.range = range
 
     def __str__(self):
         """
@@ -52,7 +54,6 @@ class Crawl(object):
         from bs4 import BeautifulSoup
         session = requests.Session()
         links = set([href.get('href') for href in BeautifulSoup(session.get(url=self.url).text).find_all('a')])
-        print(links)
 
     def user_agent(self):
         """
