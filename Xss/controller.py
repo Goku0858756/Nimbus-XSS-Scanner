@@ -8,6 +8,7 @@ class Probe(object):
     def __init__(self):
         self.name = "XSS Probe Object"
 
+
 class Full(object):
     """
     XSS Full Attack Object

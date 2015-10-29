@@ -4,4 +4,7 @@ from bs4 import BeautifulSoup
 
 if __name__ == '__main__':
     # downloads_copy_link
-    print(BeautifulSoup(requests.get(url="https://www.mongodb.org/downloads").text).find_all("a", {"href": "btn-primary btn-border-curved btn-large text-sm"}))
+    # aa = BeautifulSoup(requests.get(url="https://www.mongodb.org/downloads#production").text).find_all("a", {"href": "btn-primary btn-border-curved btn-large text-sm"})
+    aa = BeautifulSoup(requests.get(url="https://www.mongodb.org/downloads#production").text)
+
+    print(aa.prettify())
